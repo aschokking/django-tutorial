@@ -1,12 +1,4 @@
 {% if latest_poll_list %}
-<<<<<<< HEAD
-	<ul>
-	{% for poll in latest_poll_list %}
-		<li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
-	{% endfor %}
-{% else %}
-	<p>No polls are available</p>
-=======
 <ul>
 {% for poll in latest_poll_list %}
 <li><a href="{% url 'polls:detail' poll.id %}">{{poll.question}}</a></li>
@@ -14,5 +6,4 @@
 </ul>
 {% else %}
 <p>No polls available right now<p>
->>>>>>> 608791288c376b1b228d38d626f2f2f41c514e40
 {% endif %}
